@@ -156,8 +156,8 @@ ip a |grep "global eth0"
 
 启动服务  
 1. 先启动后端服务
-  1. 方法1: 启动后端服务文件：`javac aps/jvs-aps-mgr/src/main/java/cn/bctools/aps/JvsApsApplication.java`
-  2. 方法2: 通过maven进行包管理, 并且打包成jar包后运行: `mvn clean package` + `java -jar jvs-aps-mgr/xxx.jar`
+    - 方法1: 启动后端服务文件：`javac aps/jvs-aps-mgr/src/main/java/cn/bctools/aps/JvsApsApplication.java`
+    - 方法2: 通过maven进行包管理, 并且打包成jar包后运行: `mvn clean package` + `java -jar jvs-aps-mgr/xxx.jar`
 2. 前端启动命令  
 ```
 npm inatall
