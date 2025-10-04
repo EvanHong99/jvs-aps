@@ -142,13 +142,23 @@ docker-compose -f docker-compose-db.yml  up -d
 ```
 
 修改配置文件  
+
+1. 将`redis`的`host`和`datasource`的`url`中`localhost`修改为本机分配到的ip
+
+```
+ip a |grep "global eth0"
+```
+
+2. 在datasource的url最后加入`&allowPublicKeyRetrieval=true`
+
 ![image](https://github.com/user-attachments/assets/0e3f5b47-8443-49f1-adbf-517751a224dc)
 
 
 启动服务  
-a、先启动后端服务
-启动后端服务文件：aps/jvs-aps-mgr/src/main/java/cn/bctools/aps/JvsApsApplication.java  
-b、前端启动命令  
+1. 先启动后端服务
+  1. 方法1: 启动后端服务文件：`javac aps/jvs-aps-mgr/src/main/java/cn/bctools/aps/JvsApsApplication.java`
+  2. 方法2: 通过maven进行包管理, 并且打包成jar包后运行: `mvn clean package` + `java -jar jvs-aps-mgr/xxx.jar`
+2. 前端启动命令  
 ```
 npm inatall
 npm run dev
